@@ -108,4 +108,21 @@ public class Version implements Comparable<Version>, Serializable {
         return 0;
     }
 
+    @Override
+    public boolean equals(Object o) {
+        if (!(o instanceof Version)) {
+            return false;
+        }
+        if (compareTo((Version) o) == 0) {
+            return true;
+        }
+
+        return false;
+    }
+
+    @Override
+    public int hashCode() {
+        return super.hashCode(); //To change body of generated methods, choose Tools | Templates.
+    }
+
 }
